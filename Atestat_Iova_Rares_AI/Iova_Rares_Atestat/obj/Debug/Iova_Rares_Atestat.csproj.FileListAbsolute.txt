@@ -1,0 +1,63 @@
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.pdb
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csprojResolveAssemblyReference.cache
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Form1.resources
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Properties.Resources.resources
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csproj.GenerateResource.Cache
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+E:\Media Server\Developing Visual\Projects\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.SnakeVision.resources
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csprojResolveAssemblyReference.cache
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.BrainViewer.resources
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Form1.resources
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Properties.Resources.resources
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.SnakeVision.resources
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csproj.GenerateResource.Cache
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe
+C:\Users\cristaling\Desktop\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.pdb
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.pdb
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csprojResolveAssemblyReference.cache
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.BrainViewer.resources
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Form1.resources
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Properties.Resources.resources
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.SnakeVision.resources
+F:\Proiecte C#\Iova_Rares_Atestat\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csproj.GenerateResource.Cache
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.pdb
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csprojResolveAssemblyReference.cache
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.BrainViewer.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Form1.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Properties.Resources.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.SnakeVision.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat002\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csproj.GenerateResource.Cache
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.pdb
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csprojResolveAssemblyReference.cache
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.BrainViewer.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Form1.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Properties.Resources.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.SnakeVision.resources
+C:\Users\ucanb\Desktop\Latest C#\Iova_Rares_Atestat003\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csproj.GenerateResource.Cache
+C:\Users\ucanb\Desktop\Latest C#\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+C:\Users\ucanb\Desktop\Latest C#\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+C:\Users\ucanb\Desktop\Latest C#\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
