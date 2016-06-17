@@ -9,71 +9,70 @@ namespace Iova_Rares_Atestat
     class Brain
     {
 
-        List<double> inputs;
         List<NeuronLayer> layers = new List<NeuronLayer>();
+        List<double> outputs = new List<double>();
 
-        public Brain(int inputNr, int outputNr)
+        public Brain(int inputNr, int outputNr, int hiddenNr, int hiddenSize)
         {
-            layers.Add(new NeuronLayer(100, inputNr));
-            for (int i = 1; i < 2; i++)
+            layers.Add(new NeuronLayer(inputNr, hiddenSize));
+            for (int i = 1; i < hiddenNr; i++)
             {
-                layers.Add(new NeuronLayer(100, 100));
+                layers.Add(new NeuronLayer(hiddenSize, hiddenSize));
             }
-            layers.Add(new NeuronLayer(1, 100));
+            layers.Add(new NeuronLayer(outputNr, hiddenSize));
         }
 
-        public void setWeights(List<double> ins)
+        public void setWeights(List<double> newWeights)
         {
             int index = 0;
-            foreach (NeuronLayer nl in layers)
+            foreach (NeuronLayer neuronLayer in layers)
             {
-                List<double> newWeights = new List<double>();
-                int nr = nl.getWeights().Count;
-                for (int i = 1; i <= nr; i++)
+                List<double> newWeightsL = new List<double>();
+                int weightNr = neuronLayer.getWeightNumber();
+                for (int i = 1; i <= weightNr; i++)
                 {
-                    newWeights.Add(ins[index]);
+                    newWeightsL.Add(newWeights[index]);
                     index++;
                 }
-                nl.setWeights(newWeights);
+                neuronLayer.setWeights(newWeightsL);
             }
         }
 
         public List<double> getWeights()
         {
             List<double> result = new List<double>();
-            foreach (NeuronLayer nl in layers)
+            foreach (NeuronLayer neuronLayer in layers)
             {
-                foreach (double dd in nl.getWeights())
+                List<double> layerWeights = neuronLayer.getWeights();
+                foreach (double weight in layerWeights)
                 {
-                    result.Add(dd);
+                    result.Add(weight);
                 }
             }
             return result;
         }
 
-        public void setInputs(List<double> ins)
+        public void setInputs(List<double> newInputs)
         {
-            //Console.WriteLine("Brain received {0} inputs", ins.Count);
-            inputs = ins;
+            List<double> result = null;
+            foreach (NeuronLayer neuronLayer in layers)
+            {
+                if (result == null)
+                {
+                    neuronLayer.setInputs(newInputs);
+                }
+                else
+                {
+                    neuronLayer.setInputs(result);
+                }
+                result = neuronLayer.getOutputs();
+            }
+            outputs = result;
         }
 
         public List<double> getOutputs()
         {
-            List<double> result = null;
-            foreach (NeuronLayer nl in layers)
-            {
-                if (result == null)
-                {
-                    nl.setInputs(inputs);
-                }
-                else
-                {
-                    nl.setInputs(result);
-                }
-                result = nl.getOutputs();
-                //Console.WriteLine("Last Layer Output is {0}", result.Count);
-            }
-            return result;
+            return outputs;
         }
 
     }

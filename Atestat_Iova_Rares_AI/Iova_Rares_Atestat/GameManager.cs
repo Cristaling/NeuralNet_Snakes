@@ -113,6 +113,7 @@ namespace Iova_Rares_Atestat
 
         public void startNewGeneration(List<List<double>> weights)
         {
+            Console.WriteLine("Starting new gen process {0}", DateTime.Now);
             genCount = 0;
             Random rand = new Random();
             genNum++;
@@ -169,7 +170,9 @@ namespace Iova_Rares_Atestat
                     oldBrains.Add(snake.getBrain().getWeights());
                 }
                 snakes.Clear();
+                Console.WriteLine("Starting mating process {0}", DateTime.Now);
                 List<List<double>> newBrains = GeneticManager.getNewGeneration(oldBrains);
+                Console.WriteLine("Finished mating process {0}", DateTime.Now);
                 foreach (List<double> brain in newBrains)
                 {
                     int i, j;
@@ -194,6 +197,7 @@ namespace Iova_Rares_Atestat
                 }
             }
             generateFood();
+            Console.WriteLine("Finished new gen process {0}", DateTime.Now);
         }
 
         public void generateFood()

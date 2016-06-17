@@ -34,7 +34,7 @@ namespace Iova_Rares_Atestat
 
         public static double getRandomWeight()
         {
-            return (rand.NextDouble() - 0.5) * 4;
+            return rand.NextDouble() * 2 - 1;
         }
 
         public static void mutate(List<double> a)

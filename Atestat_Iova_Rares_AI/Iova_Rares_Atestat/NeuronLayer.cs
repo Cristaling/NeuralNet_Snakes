@@ -9,8 +9,10 @@ namespace Iova_Rares_Atestat
     class NeuronLayer
     {
         
-        List<double> inputs;
+        List<double> outputs = new List<double>();
         List<Neuron> neurons = new List<Neuron>();
+
+        int weightNumber;
 
         public NeuronLayer(int neuronNr, int inputNr)
         {
@@ -18,50 +20,56 @@ namespace Iova_Rares_Atestat
             {
                 neurons.Add(new Neuron(inputNr));
             }
+            weightNumber = (inputNr + 1) * neuronNr;
         }
 
-        public void setWeights(List<double> ins)
+        public void setWeights(List<double> newWeights)
         {
             int index = 0;
-            foreach(Neuron n in neurons)
+            foreach(Neuron neuron in neurons)
             {
-                List<double> newWeights = new List<double>();
-                for(int i = 1; i <= n.getWeights().Count; i++)
+                List<double> newWeightsN = new List<double>();
+                int weightNr = neuron.getWeights().Count;
+                for(int i = 1; i <= weightNr; i++)
                 {
-                    newWeights.Add(ins[index]);
+                    newWeightsN.Add(newWeights[index]);
                     index++;
                 }
-                n.setWeights(newWeights);
+                neuron.setWeights(newWeightsN);
             }
+        }
+
+        public int getWeightNumber()
+        {
+            return weightNumber;
         }
 
         public List<double> getWeights()
         {
             List<double> result = new List<double>();
-            foreach (Neuron n in neurons)
+            foreach (Neuron neuron in neurons)
             {
-                foreach (double dd in n.getWeights())
+                foreach (double weight in neuron.getWeights())
                 {
-                    result.Add(dd);
+                    result.Add(weight);
                 }
             }
             return result;
         }
 
-        public void setInputs(List<double> ins)
+        public void setInputs(List<double> newInputs)
         {
-            inputs = ins;
+            outputs = new List<double>();
+            foreach(Neuron neuron in neurons)
+            {
+                neuron.setInputs(newInputs);
+                outputs.Add(neuron.getOutput());
+            }
         }
 
         public List<double> getOutputs()
         {
-            List<double> result = new List<double>();
-            foreach (Neuron n in neurons)
-            {
-                n.setInputs(inputs);
-                result.Add(n.getOutput());
-            }
-            return result;
+            return outputs;
         }
 
     }

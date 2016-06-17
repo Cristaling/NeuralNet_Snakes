@@ -12,18 +12,19 @@ namespace Iova_Rares_Atestat
         List<double> weights = new List<double>();
         List<double> inputs;
 
+        double output;
+
         public Neuron(int inputNr)
         {
-            //Console.WriteLine("Created neuron with {0} inputs", inputNr);
             for (int i = 0; i <= inputNr; i++)
             {
                 weights.Add(GeneticManager.getRandomWeight());
             }
         }
         
-        public void setWeights(List<double> ins)
+        public void setWeights(List<double> newWeights)
         {
-            weights = ins;
+            weights = newWeights;
         }
 
         public List<double> getWeights()
@@ -31,19 +32,13 @@ namespace Iova_Rares_Atestat
             return weights;
         }
 
-        public void setInputs(List<double> ins)
+        public void setInputs(List<double> newInputs)
         {
-            if(ins.Count == weights.Count - 1)
-            {
-                inputs = ins;
-            }
-            else
-            {
-                Console.WriteLine("Invalid inputs {0} on {1} weights", ins.Count, weights.Count);
-            }
+            inputs = newInputs;
+            calculateOutput();
         }
 
-        public double getOutput()
+        public void calculateOutput()
         {
             double sum = 0;
             int num = 0;
@@ -53,7 +48,12 @@ namespace Iova_Rares_Atestat
                 num++;
             }
             sum += weights[num];
-            return GeneticManager.signoid(sum);
+            output =  GeneticManager.signoid(sum);
+        }
+
+        public double getOutput()
+        {
+            return output;
         }
 
     }
