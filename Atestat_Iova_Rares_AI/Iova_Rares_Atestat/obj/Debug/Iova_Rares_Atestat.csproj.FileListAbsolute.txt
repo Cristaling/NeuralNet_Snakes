@@ -61,3 +61,11 @@ C:\Users\ucanb\Desktop\Latest C#\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\De
 E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe.config
 E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.exe
 E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.pdb
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csprojResolveAssemblyReference.cache
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.BrainViewer.resources
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Form1.resources
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.Properties.Resources.resources
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.SnakeVision.resources
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\obj\Debug\Iova_Rares_Atestat.csproj.GenerateResource.Cache
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.exe
+E:\Media Server\Developing Visual\_GITRepos\NeuralNet_Snakes\Atestat_Iova_Rares_AI\Iova_Rares_Atestat\bin\Debug\Iova_Rares_Atestat.pdb

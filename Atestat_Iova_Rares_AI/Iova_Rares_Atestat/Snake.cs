@@ -32,7 +32,7 @@ namespace Iova_Rares_Atestat
             {
                 gameManager.map[po.Y, po.X] = -1;
             }
-            brain = new Brain(25, 1);
+            brain = new Brain(25, 1, 3, 250);
         }
 
         public void addTravel(Point trav) {
