@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neural Snakes</title>
+<meta name="description" content="Snakes with tiny neural networks for brains, learning to play by evolution. A 2017 C# project, rebuilt for the browser with every setting adjustable.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2315201a'/%3E%3Cpath d='M3 12V5h4v6h4V4' fill='none' stroke='%235dbb82' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='11' cy='4' r='1.6' fill='%23ff6a4d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand">
+      <h1>Neural Snakes</h1>
+      <p>Snakes with small neural networks for brains, learning to play by evolution. A 2017 high-school project, rebuilt for the browser.</p>
+    </div>
+    <nav aria-label="Sections">
+      <a href="#brain">Brain</a>
+      <a href="#params">Parameters</a>
+      <a href="#save">Save and load</a>
+      <a href="#how">How it works</a>
+      <a href="https://github.com/Cristaling/NeuralNet_Snakes">Source</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stage" aria-label="Simulation">
+    <div class="board-card">
+      <div class="statusbar" aria-live="off">
+        <span>Generation <b id="st-gen">1</b></span>
+        <span>Tick <b id="st-tick">0</b> / <span id="st-ticks">200</span></span>
+        <span><b id="st-alive">0</b> of <span id="st-pop">0</span> alive</span>
+        <span class="muted" id="st-rate"></span>
+      </div>
+      <div class="board-wrap">
+        <canvas id="board" aria-label="The map. Click a snake to follow it."></canvas>
+      </div>
+      <div class="controls">
+        <div class="btns">
+          <button type="button" class="btn primary" id="btn-run">Pause</button>
+          <button type="button" class="btn" id="btn-step" title="Advance one tick">Step</button>
+          <button type="button" class="btn" id="btn-endgen">End generation</button>
+          <button type="button" class="btn" id="btn-new">New random population</button>
+        </div>
+        <div class="speed">
+          <label for="speed">Speed <output id="speed-out">20</output> ticks/s</label>
+          <input type="range" id="speed" min="1" max="120" step="1" value="20">
+          <label class="check"><input type="checkbox" id="speed-max"> As fast as possible</label>
+        </div>
+      </div>
+      <p class="hint" id="run-label"></p>
+    </div>
+
+    <aside class="side">
+      <section class="panel" aria-labelledby="follow-h">
+        <div class="panel-head">
+          <h2 id="follow-h">Following <span id="fl-name">the leader</span></h2>
+          <button type="button" class="btn small" id="btn-auto" hidden>Follow the leader</button>
+        </div>
+        <div class="follow">
+          <figure class="vision">
+            <canvas id="vision" aria-label="What the snake sees"></canvas>
+            <figcaption>What it sees</figcaption>
+          </figure>
+          <dl class="stats" id="fl-stats"></dl>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="leaders-h">
+        <div class="panel-head"><h2 id="leaders-h">This generation</h2><span class="muted small" id="rank-mode"></span></div>
+        <ol class="leaders" id="leaders"></ol>
+      </section>
+
+      <section class="panel" aria-labelledby="chart-h">
+        <div class="panel-head">
+          <h2 id="chart-h">Progress</h2>
+          <div class="seg" role="group" aria-label="Chart metric" id="chart-metric">
+            <button type="button" data-m="eaten" aria-pressed="true">Food</button>
+            <button type="button" data-m="cells" aria-pressed="false">Cells</button>
+            <button type="button" data-m="time" aria-pressed="false">Survival</button>
+          </div>
+        </div>
+        <canvas id="chart" class="chart" aria-label="Best and average per generation"></canvas>
+        <div class="legend"><span><i class="lg-best"></i>best snake</span><span><i class="lg-avg"></i>average</span></div>
+      </section>
+    </aside>
+  </section>
+
+  <section class="panel wide" id="brain" aria-labelledby="brain-h">
+    <div class="panel-head">
+      <h2 id="brain-h">The brain</h2>
+      <span class="muted small" id="brain-sum"></span>
+    </div>
+    <div class="brain-scroll"><div id="brain-view" class="bflow"></div></div>
+    <p class="caption">The followed snake's brain at this moment, one block per layer, drawn the way the maths reads: y = f(W·x). The strip along the top is x, the values entering the layer; its last cell is a constant 1 for the bias. The square is the weight matrix W: each row is one neuron's weights, lined up under the inputs they multiply. The strip down the right is y, what each neuron outputs. It becomes the top strip of the next layer. Amber is positive, blue is negative. In the first layer's top strip, blue cells are walls or bodies and amber cells are food.</p>
+  </section>
+
+  <section class="panel wide" id="params" aria-labelledby="params-h">
+    <div class="panel-head">
+      <h2 id="params-h">Parameters</h2>
+      <div class="presets" id="presets"></div>
+    </div>
+    <div class="banner" id="restart-banner" hidden>
+      <span>Vision, steering, brain and seed changes need a new population.</span>
+      <button type="button" class="btn primary small" id="btn-restart">Start a new population</button>
+    </div>
+    <p class="muted small">Each setting says when it takes effect. Your settings are remembered in this browser.</p>
+    <div class="pgrid" id="param-groups"></div>
+  </section>
+
+  <section class="panel wide" id="save" aria-labelledby="save-h">
+    <div class="panel-head"><h2 id="save-h">Save and load</h2></div>
+    <div class="saveload">
+      <div class="sl-block">
+        <h3>This population</h3>
+        <p>Download every snake's brain, with the settings it needs, as a JSON file.</p>
+        <div class="btns">
+          <button type="button" class="btn" id="btn-export">Download population</button>
+          <label class="btn" for="file-import">Load a file…</label>
+          <input type="file" id="file-import" accept="application/json,.json" class="visually-hidden">
+        </div>
+      </div>
+      <div class="sl-block">
+        <h3>The 2017 snakes</h3>
+        <p>The original program saved three generations of evolved snakes. These load the real files from this repository and switch the settings to match them.</p>
+        <div class="btns">
+          <select id="legacy-gen" aria-label="2017 generation">
+            <option value="Gen950">Generation 950</option>
+            <option value="Gen1500">Generation 1500</option>
+            <option value="Gen2000" selected>Generation 2000</option>
+          </select>
+          <button type="button" class="btn" id="btn-legacy">Load the 2017 snakes</button>
+        </div>
+      </div>
+    </div>
+    <p class="status" id="save-status" aria-live="polite"></p>
+  </section>
+
+  <section class="panel wide prose" id="how" aria-labelledby="how-h">
+    <h2 id="how-h">How it works</h2>
+    <div class="how-grid">
+      <div>
+        <h3>Seeing</h3>
+        <p>Each tick, a snake looks at a small window of cells in front of it, turned to face the way it's going: 5 rows by 5 columns in the original. Every cell becomes one input number: −1 for a wall or a body, 1 for food, 0 for empty. The optional food compass adds two more inputs that point at the nearest food.</p>
+      </div>
+      <div>
+        <h3>Thinking</h3>
+        <p>The inputs go through a multilayer perceptron. Each neuron multiplies every input by a weight, adds them up with a bias, and passes the sum through an activation function. A whole layer is a matrix of weights times a vector of inputs. The original's saved snakes have 25 inputs, two hidden layers of 100 neurons and one output: 12,801 weights each.</p>
+      </div>
+      <div>
+        <h3>Steering</h3>
+        <p>In the original, the single output is split into thirds: below 0.33 turns left, above 0.67 turns right, and anything in between goes straight. The alternative uses three outputs, one per choice, and takes the largest.</p>
+      </div>
+      <div>
+        <h3>Evolving</h3>
+        <p>Nobody trains these brains with examples. After each generation the snakes are ranked by how long they grew, then by how many different cells they visited, then by how long they lived. The best are paired up, and each pair has children: copies, mutated copies, mixes of the two parents' weights, and some brand-new random snakes. Over hundreds of generations, brains that happen to steer well take over.</p>
+      </div>
+    </div>
+    <p class="muted small">Two quirks of the 2017 code are kept as options: its activation computed 1 / (1 + eˣ), a mirrored sigmoid, and every mutant had all of its weights nudged. The original C# project is still in the repository, in <a href="https://github.com/Cristaling/NeuralNet_Snakes/tree/master/Atestat_Iova_Rares_AI">Atestat_Iova_Rares_AI</a>.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>Neural Snakes · Rares Iova · 2017, rebuilt 2026</span>
+  <a href="https://github.com/Cristaling/NeuralNet_Snakes">github.com/Cristaling/NeuralNet_Snakes</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "neural-snakes",
+  "private": true,
+  "description": "Snakes that learn to play by neuroevolution. A 2017 C# project, rebuilt for the browser.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/smoke.js",
+    "serve": "npx --yes serve ."
+  }
+}
